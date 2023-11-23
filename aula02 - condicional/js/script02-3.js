@@ -26,3 +26,9 @@ if (idade >= 1 && idade < 15) {
         alert("Obrigado por utilizar nossa aplicação!");
         close;
     };
+
+    //if(idade > 0 && idade < 15{
+     //   alert("você é criança");
+    //    location.reload();
+    //})
+
