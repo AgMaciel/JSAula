@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Agis Maciel">
+    <link rel="stylesheet" href="./styles/stile01.css">
+    <title>DOM - Document Objet Model</title>
+</head>
+<body>
+    <div id="page">
+    
+    <main>
+        <img src="./imagens/salario-familia.jpg" alt="">
+        <form action="" method="post">
+            <div class="formGroup">
+                    <input type="text" id="empregado" placeholder="Empregado">
+                    <input type="number" id="filhos" placeholder=" Quantidade de filhos menores de 14 anos ou inválidos">
+                    <input type="number" id="salario" placeholder="Salário Contribuição">
+            </div>
+        </form>
+        <div >
+            <table class="formGroup">
+                <tr>
+                    <th>Salário contribuição</th>
+                    <th>Cota do salário família</th>
+                </tr>
+                <tr>
+                    <td>Até R$ 806,80</td>
+                    <td>R$ 41,37 por filho</td>
+                </tr>
+                <tr>
+                    <td>Até R$ 806,81 e R$ 1.212,64</td>
+                    <td>R$ 29,16 por filho</td>
+                </tr>
+                <tr>
+                    <td>Mais de R$ 1.212,64</td>
+                    <td>Não há</td>
+                </tr>
+                
+                
+            </table>
+        </div>
+        <div class="formGroup">
+            <button id="btnCalcular" type="button">Calcular</button>
+        </div>
+        <div class="formGroup">
+        <span id="resultado">Resultado do Cálculo</span>
+        </div>
+    </main>
+    
+    </div>
+    <footer class="formGroup">
+       <img src="./imagens/footer.jpg">
+    </footer>
+
+    <script src="./js/script04.js"></script>
+</body>
+</html>

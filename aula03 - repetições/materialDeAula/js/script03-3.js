@@ -1,9 +1,21 @@
 var filmes = ["Matrix - todos", "Blade Runner", "007- Todos", "Tropa de Elite", "Senhor Dos Anéis"];
-console.log(estoqueProdutos);
+//for(var contador = 0; contador < filmes.length ; contador++){
+//    console.log(filmes[contador]);
+//};
 
-var count = 1;
-var num = count++;
-var result = num + 
-for(let count = 1; count <= 10; count++){
-    console.log(count + "8" + "=" count + count);
+//util para iniciar e contar os arrays
+filmes.forEach((cadaFilme) => {
+    console.log(cadaFilme);
+});
+
+for(var cont = 0; cont <= 10; cont++){
+    console.log(`${cont} X 8 = ${cont * 8}`);
 };
+
+console.log("------------------------------");
+for(var tabuada = 1; tabuada <= 10; tabuada++){
+    for(var cont = 0; cont <= 10; cont++){
+        console.log(`${cont} X ${tabuada} = ${cont * 8}`);
+    };
+};
+console.log("------------------------------");
