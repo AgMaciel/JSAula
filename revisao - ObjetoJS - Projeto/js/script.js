@@ -1,4 +1,4 @@
-class filme{
+class Filme{
     constructor(){
         this.nome = nome;
         this.descricao = descricao;
@@ -8,11 +8,11 @@ class filme{
     }
    
 }
-var btnCadastrarFilme = document.querySelector("#btnCadastrarFilme");
+var cadastrarFilme = document.querySelector("#btnCadastrarFilme");
 
-btnCadastrarFilme.addEventListener('click', cadastrarFilme);
+cadastrarFilme.addEventListener('click', novoFilme);
 
-function cadastrarFilme(){
+function novoFilme(){
     // Obter os valores do formulário
     let nome = document.querySelector("#nome").value;
     let descricao = document.querySelector("#descricao").value;
@@ -22,7 +22,7 @@ function cadastrarFilme(){
    
     let resposta = document.querySelector("#resposta");
 
-    var meuFilme = new filme(
+    var meuFilme = new Filme(
         nome,
         descricao,
         data,
