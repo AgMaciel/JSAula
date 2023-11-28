@@ -1,0 +1,28 @@
+.post{
+    width: 200px;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(245, 245, 220);
+}
+.post {
+    border: 1px solid #ccc;
+    padding: 25px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.post h3 {
+    color: #333;
+}
+
+.post p {
+    margin: 5px 0;
+    color: #666;
+}
+.post img{
+    width: 10%;
+    height: 5px;
+}

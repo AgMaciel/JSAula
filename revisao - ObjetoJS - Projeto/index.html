@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Atividade Revisão - Objeto JS</title>
+</head>
+<body>
+    
+    <form id="formFilme">
+        <label for="nome">Nome do Filme:</label>
+        <input type="text" id="nome" required><br>
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" rows="4" required></textarea><br>
+
+        <label for="data">Data de Lançamento:</label>
+        <input type="date" id="data" required><br>
+
+        <label for="diretor">Diretor:</label>
+        <input type="text" id="diretor" required><br>
+
+        <label for="categoria">Categoria:</label>
+        <input type="text" id="categoria" required><br>
+
+        <button type="button" onclick="cadastrarFilme()" id="btnCadastrarFilme">Cadastrar Filme</button>
+    </form>
+
+    <ul id="listaFilmes"></ul>
+
+
+
+
+
+
+
+    <scrip src="./js/script.js"></scrip>
+</body>
+</html>
