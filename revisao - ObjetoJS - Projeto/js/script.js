@@ -1,5 +1,5 @@
 class Filme{
-    constructor(){
+    constructor(nome, descricao, data, diretor, categoria){
         this.nome = nome;
         this.descricao = descricao;
         this.data = data;
@@ -8,9 +8,43 @@ class Filme{
     }
    
 }
-var cadastrarFilme = document.querySelector("#btnCadastrarFilme");
 
-cadastrarFilme.addEventListener('click', novoFilme);
+//seletores
+const btnCadastrar = document.querySelector("btnCadastrarFilme");
+const btnListar = document.querySelector("listaFilme");
+//var cadastrarFilme = document.querySelector("#btnCadastrarFilme");
+
+function cadastrar(){
+    let nome = document.querySelector("#nome").value;
+    let descricao = document.querySelector("#descricao").value;
+    let data = document.querySelector("#date").value;
+    let diretor = document.querySelector("#diretor").value;
+    let categoria = document.querySelector("#categoria").value;
+
+    var meuFilme = new Filme(
+        nome,
+        descricao,
+        data,
+        diretor,
+        categoria
+    );
+   
+    let resposta = document.querySelector("#resposta");
+}
+
+function listar(){
+    let spanResposta = document.querySelector("resposta");
+
+    spanResposta.innerHTML = `<div class="post">
+    <h3>${meuFilme.nome}</h3>
+    <p>${meuFilme.descricao}</p>
+    <p>${meuFilme.data}</p>
+    <p>${meuFilme.diretor}</p>
+    <p>${meuFilme.categoria}</p>
+    </div>`;
+}
+
+btnCadastrar.addEventListener('click', novoFilme);
 
 function novoFilme(){
     // Obter os valores do formulário
@@ -21,7 +55,8 @@ function novoFilme(){
     let categoria = document.querySelector("#categoria").value;
    
     let resposta = document.querySelector("#resposta");
-
+    
+    
     var meuFilme = new Filme(
         nome,
         descricao,
@@ -29,8 +64,9 @@ function novoFilme(){
         diretor,
         categoria
     );
+    
 
-    resposta.innerHTML = `
+    spanResposta.innerHTML = `
     <div class="post">
         <h3>${meuFilme.nome}</h3>
         <p>${meuFilme.descricao}</p>
@@ -38,31 +74,14 @@ function novoFilme(){
         <p>${meuFilme.diretor}</p>
         <p>${meuFilme.categoria}</p>
     </div>
-                        `;
+    `;
 
-  // Adicionar o filme à lista
-  adicionarFilmeNaLista(meuFilme);
 
   // Limpar o formulário
   limparFormulario();
 
 }
 
-function adicionarFilmeNaLista(filme) {
-    // Obter a lista de filmes
-    let listaFilmes = document.getElementById('listaFilmes');
-
-    // Criar um elemento de lista para o filme
-    let li = document.createElement('li');
-    li.innerHTML = `<strong>${filme.nome}</strong><br>
-                    <em>${filme.diretor}</em><br>
-                    <span>${filme.data}</span><br>
-                    <span>${filme.categoria}</span><br>
-                    <p>${filme.descricao}</p>`;
-
-    // Adicionar o elemento à lista
-    listaFilmes.appendChild(li);
-}
 
 function limparFormulario() {
     // Limpar os campos do formulário
