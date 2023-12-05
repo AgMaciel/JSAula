@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.temaClaro{
+    background-color: antiquewhite;
+}
+
+.temaEscuro{
+    background-color: blue;
+}
