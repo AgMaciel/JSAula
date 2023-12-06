@@ -1,22 +1,18 @@
 const btnTrocar = document.querySelector("#btnTrocar");
-const btnTrocarDados = document.querySelector("#btntrocarTodos");
+const btnTrocarDados = document.querySelector("#btnTrocarDados"); // Corrigir o ID
 
 btnTrocar.addEventListener("click", trocarUmTermo);
-btnTocarTodos.addEventListener("click", trocarTodosTermos);
+btnTrocarDados.addEventListener("click", trocarTodosTermos);
 
 function trocarUmTermo(){
-    let blocoDeTexto = document.querySelector('#blocoDetexto');
+    let blocoDeTexto = document.querySelector('#blocoDeTexto'); // Corrigir o ID
     let removerTermo = document.querySelector('#removerTermo').value;
     let adicionarTermo = document.querySelector('#adicionarTermo').value;
 
-    let blocoDeTextoFormatado = blocoDeTexto.value.replace(removerTermo, adicionarTermo);   
- 
+    let blocoDeTextoFormatado = blocoDeTexto.value.replace(removerTermo, adicionarTermo);
+    
+    blocoDeTexto.value = blocoDeTextoFormatado; // Mover esta linha para dentro da função
 }
-
-
-   
-
-    blocoDeTexto.value = blocoDeTextoFormatado;
 
 var jogos = ["Call Of Duty", "GTA", "outros"];
 
@@ -26,14 +22,13 @@ btnPesquisar.addEventListener("click", pesquisar);
 
 function pesquisar(){
     let pesquisarInput = document.querySelector("#pesquisa").value;
-    let resposta = jogos.includes(pesquisarInput);
+    let resposta = document.querySelector("#resposta"); 
 
     var resultado = jogos.includes(pesquisarInput);
 
     if(resultado == true){
-        resposta.innerHTML = `Jogo encontrado! o jog pesquisado foi ${pesquisarInput}`;
-
-    }else{
+        resposta.innerHTML = `Jogo encontrado! O jogo pesquisado foi ${pesquisarInput}`;
+    } else {
         resposta.innerHTML = `Jogo não encontrado`;
     }
 }

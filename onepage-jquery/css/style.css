@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    padding: 31px;
+}
+
+.container{
+    display: flex;
+}
